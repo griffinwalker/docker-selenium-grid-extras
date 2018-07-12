@@ -20,8 +20,7 @@ RUN  mkdir -p $PATH_TO_SELENIUM \
 #====================================
 # Scripts to run Selenium Grid Extras
 #====================================
-WORKDIR Hub
-COPY entry_point.sh /opt/bin/
+COPY Hub/entry_point.sh /opt/bin/
 COPY log4j.properties $PATH_TO_SELENIUM/log4j.properties
 RUN chmod +x /opt/bin/entry_point.sh
 ADD hub_4444.json $PATH_TO_SELENIUM/hub_4444.json
