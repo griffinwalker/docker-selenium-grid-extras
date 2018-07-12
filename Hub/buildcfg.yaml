@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: '2018-07-12T20:38:49Z'
+  labels:
+    app: selenium-xtras-hub
+  name: selenium-xtras-hub
+  namespace: automation
+  resourceVersion: '272673499'
+  selfLink: /oapi/v1/namespaces/automation/buildconfigs/selenium-xtras-hub
+  uid: 949e98f7-8613-11e8-81d5-12e0fd7ffa66
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'selenium-xtras-hub:latest'
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: 'ssh://git@github.com/griffinwalker/docker-selenium-grid-extras.git'
+    sourceSecret:
+      name: github
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'alpine:latest'
+      dockerfilePath: Hub/Dockerfile
+    type: Docker
+  successfulBuildsHistoryLimit: 5
+  triggers:
+    - github:
+        secret: YBYPxvCeuv_7b6ObSq2X
+      type: GitHub
+    - generic:
+        secret: ZcG7ZV0I1hG5QpsmaFft
+      type: Generic
+    - imageChange:
+        lastTriggeredImageID: >-
+          alpine@sha256:8c03bb07a531c53ad7d0f6e7041b64d81f99c6e493cb39abba56d956b40eacbc
+      type: ImageChange
+    - type: ConfigChange
+status:
+  lastVersion: 2
