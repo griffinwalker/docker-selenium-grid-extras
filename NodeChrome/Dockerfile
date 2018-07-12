@@ -19,7 +19,7 @@ COPY chrome_launcher.sh /opt/google/chrome/google-chrome
 RUN chmod +x /opt/google/chrome/google-chrome
 
 #Add Node Configuration
-ADD node_chrome.json $PATH_TO_SELENIUM/node_5555.json
-ADD selenium_grid_extras_config_chrome.json $PATH_TO_SELENIUM/selenium_grid_extras_config.json
+ADD NodeChrome/node_chrome.json $PATH_TO_SELENIUM/node_5555.json
+ADD NodeChrome/selenium_grid_extras_config_chrome.json $PATH_TO_SELENIUM/selenium_grid_extras_config.json
 
 EXPOSE 5555 3000
