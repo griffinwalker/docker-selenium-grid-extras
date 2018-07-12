@@ -21,10 +21,10 @@ RUN  mkdir -p $PATH_TO_SELENIUM \
 # Scripts to run Selenium Grid Extras
 #====================================
 COPY Hub/entry_point.sh /opt/bin/
-COPY log4j.properties $PATH_TO_SELENIUM/log4j.properties
+COPY Hub/log4j.properties $PATH_TO_SELENIUM/log4j.properties
 RUN chmod +x /opt/bin/entry_point.sh
-ADD hub_4444.json $PATH_TO_SELENIUM/hub_4444.json
-ADD selenium_grid_extras_config.json $PATH_TO_SELENIUM/selenium_grid_extras_config.json
+ADD Hub/hub_4444.json $PATH_TO_SELENIUM/hub_4444.json
+ADD Hub/selenium_grid_extras_config.json $PATH_TO_SELENIUM/selenium_grid_extras_config.json
 
 EXPOSE 4444 3000
 
