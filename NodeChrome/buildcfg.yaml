@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: '2018-07-12T20:49:09Z'
+  labels:
+    app: selenium-xtras-chrome-node
+  name: selenium-xtras-chrome-node
+  namespace: automation
+  resourceVersion: '272679929'
+  selfLink: /oapi/v1/namespaces/automation/buildconfigs/selenium-xtras-chrome-node
+  uid: 066d9e23-8615-11e8-81d5-12e0fd7ffa66
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'selenium-xtras-chrome-node:latest'
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: 'ssh://git@github.com/griffinwalker/docker-selenium-grid-extras.git'
+    sourceSecret:
+      name: github
+    type: Git
+  strategy:
+    dockerStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'selenium-grid-extras-base:2.0.2'
+      dockerfilePath: NodeChrome/Dockerfile
+    type: Docker
+  successfulBuildsHistoryLimit: 5
+  triggers:
+    - github:
+        secret: pALba0r-gGaVe9w2vRTF
+      type: GitHub
+    - generic:
+        secret: cF2eFM9nGoy8R5ZA8GHf
+      type: Generic
+    - imageChange:
+        lastTriggeredImageID: >-
+          minium/selenium-grid-extras-base@sha256:c65a46557be6d0f8cd938d038f3ac855158f40f33ca321bc6d80f02d85d81f6d
+      type: ImageChange
+    - type: ConfigChange
+status:
+  lastVersion: 2
