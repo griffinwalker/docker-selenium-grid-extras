@@ -1,0 +1,16 @@
+version: '3'
+services:
+  seleniumhub:
+    image: minium/selenium-grid-extras-hub:2.0.2
+    build: 
+      context: .
+      args: 
+        - SELENIUM_GRID_EXTRAS_VERSION
+    container_name: selenium-grid-extras-hub
+    restart: unless-stopped
+    ports:
+      - "4444:4444"
+      - "3000:3000"
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx512m
+      - SCREEN_DEPTH=24
