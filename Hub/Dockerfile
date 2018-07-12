@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:latest
 MAINTAINER Minium Team <minium@vilt-group.com>
 
 ARG SELENIUM_GRID_EXTRAS_VERSION=2.0.2
@@ -20,6 +20,7 @@ RUN  mkdir -p $PATH_TO_SELENIUM \
 #====================================
 # Scripts to run Selenium Grid Extras
 #====================================
+WORKDIR Hub
 COPY entry_point.sh /opt/bin/
 COPY log4j.properties $PATH_TO_SELENIUM/log4j.properties
 RUN chmod +x /opt/bin/entry_point.sh
