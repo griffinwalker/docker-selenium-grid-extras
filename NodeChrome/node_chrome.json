@@ -16,7 +16,7 @@
   "register": true,
   "unregisterIfStillDownAfter": 10000,
   "hubPort": 4444,
-  "hubHost": "seleniumHub",
+  "hubHost": "selenium-xtras-hub",
   "registerCycle": 5000,
   "nodeStatusCheckTimeout": 10000,
   "custom": {},
