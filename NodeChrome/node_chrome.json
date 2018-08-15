@@ -15,7 +15,6 @@
   "port": 5555,
   "register": true,
   "unregisterIfStillDownAfter": 10000,
-  "hub": "http://selenium-xtras-hub:4444",
   "hubPort": 4444,
   "hubHost": "selenium-xtras-hub",
   "registerCycle": 5000,
