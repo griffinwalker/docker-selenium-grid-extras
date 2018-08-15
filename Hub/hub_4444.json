@@ -10,6 +10,6 @@
   "cleanUpCycle": 5000,
   "browserTimeout": 3600,
   "timeout": 1800,
-  "maxSession": 5,
+  "maxSession": 99,
   "debug": false
 }
