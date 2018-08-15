@@ -3,7 +3,7 @@
     {
       "seleniumProtocol": "WebDriver",
       "browserName": "chrome",
-      "maxInstances": 3,
+      "maxInstances": 2,
       "version": "",
       "platform": "LINUX"
     }
