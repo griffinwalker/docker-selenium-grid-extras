@@ -19,7 +19,7 @@
     "grid_extras_port": "3000",
     "grid_jvm_x_options": "-Xms512m -Xmx512m",        
     "grid_jvm_options": {
-      "selenium.LOGGER.level": "SEVERE"
+      "selenium.LOGGER.level": "ALL"
     },      
     "chromedriver": {
       "bit": "64",
