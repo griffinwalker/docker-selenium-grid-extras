@@ -1,6 +1,6 @@
 {
   "theConfigMap": {
-    "auto_update_browser_versions": "1",
+    "auto_update_browser_versions": "0",
     "hub_config_files": [
       "hub_4444.json"
     ],

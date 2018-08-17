@@ -12,7 +12,7 @@
       "title_frame_font_color": "0,0,0,0",
       "lower_third_font_color": "0,0,0,0"
     },
-    "auto_start_node": "1",
+    "auto_start_node": "0",
     "hub_config": {},
     "log_maximum_age_ms": 864000000,
     "reboot_after_sessions": "0",
