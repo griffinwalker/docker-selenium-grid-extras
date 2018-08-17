@@ -11,5 +11,5 @@
   "browserTimeout": 3600,
   "timeout": 1800,
   "maxSession": 99,
-  "debug": false
+  "debug": true
 }
